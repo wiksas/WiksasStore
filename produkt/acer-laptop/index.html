@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIKSAS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../../glowna/style.css">
+    <script src="../../glowna/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="../../glowna/logo.png">
+</head>
+<body>
+
+    <header>
+
+
+        <div class="header-left">
+            <div class="logo">
+                <a href="../../glowna/index.html"> <img src="../../glowna/logo.png" alt="WIKSAS Logo"> </a>
+                <span class="logo-text">Wiksas <br> twój sklep</span> </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-input-group">
+                <input type="text" placeholder="Czego szukasz?">
+            </div>
+            <button class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="header-right">
+            <div class="user-info">
+                Cześć, <br> zaloguj się
+            </div>
+            <div class="icons-group">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-detail-page">
+        <div class="product-detail-container">
+                <div class="product-image-gallery">
+                    <img src="img/acer-laptop-main.webp" alt="Laptop Acer Main Image" id="mainProductImage">
+
+                    <div class="thumbnail-gallery">
+                        <img src="img/acer-laptop-main.webp" alt="Laptop Acer Main Image" data-full-image="img/acer-laptop-main.webp">
+
+                        <img src="img/acer-laptop-thumb1.webp" alt="Laptop Acer Thumbnail 1" data-full-image="img/acer-laptop-thumb1.webp">
+                        <img src="img/acer-laptop-thumb2.webp" alt="Laptop Acer Thumbnail 2" data-full-image="img/acer-laptop-thumb2.webp">
+                        <img src="img/acer-laptop-thumb3.webp" alt="Laptop Acer Thumbnail 3" data-full-image="img/acer-laptop-thumb3.webp">
+                    </div>
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Laptop Acer</h1>
+                <p class="product-price">2 199 zł</p>
+
+                <div class="product-short-description">
+                    <p>
+                        Wydajny i lekki laptop Acer idealny do pracy oraz codziennego użytku. Wyposażony w szybki procesor Intel Core i5 oraz dysk SSD.
+                    </p>
+                </div>
+
+                <div class="product-actions">
+                    <button class="add-to-cart-lg">Dodaj do koszyka <i class="fas fa-shopping-cart"></i></button>
+                </div>
+
+                <div class="product-specs">
+                    <h2>Specyfikacja:</h2>
+                    <ul>
+                        <li><b>Procesor:</b> Intel Core i5-1135G7</li>
+                        <li><b>Pamięć RAM:</b> 8 GB DDR4</li>
+                        <li><b>Dysk:</b> 512 GB SSD NVMe</li>
+                        <li><b>Ekran:</b> 14 cali, Full HD (1920x1080) IPS</li>
+                        <li><b>Karta graficzna:</b> Intel Iris Xe Graphics</li>
+                        <li><b>System operacyjny:</b> Windows 11 Home</li>
+                        <li><b>Bateria:</b> Do 10 godzin pracy</li>
+                        <li><b>Waga:</b> 1.5 kg</li>
+                        <li><b>Łączność:</b> Wi-Fi 6, Bluetooth 5.1</li>
+                        <li><b>Porty:</b> 2x USB 3.2 Gen 1, 1x USB-C, HDMI, Audio Jack</li>
+                    </ul>
+                </div>
+                <div class="product-description-full">
+                    <h2>Szczegółowy opis:</h2>
+                    <p>
+                        Zanurz się w świecie wydajności i mobilności dzięki laptopowi Acer, zaprojektowanemu z myślą o użytkownikach ceniących sobie niezawodność i komfort pracy. Jego smukła konstrukcja i niska waga sprawiają, że jest idealnym towarzyszem podróży służbowych oraz studentów. Sercem urządzenia jest nowoczesny procesor Intel Core i5 jedenastej generacji, który w połączeniu z 8 GB pamięci RAM gwarantuje płynną obsługę wielu aplikacji jednocześnie oraz szybkie przełączanie się między zadaniami.
+                    </p>
+                    <p>
+                        Dysk SSD NVMe o pojemności 512 GB zapewnia błyskawiczne uruchamianie systemu i programów, a także mnóstwo miejsca na Twoje pliki. Wyświetlacz Full HD o przekątnej 14 cali z matrycą IPS oferuje żywe kolory i szerokie kąty widzenia, co sprawia, że zarówno praca z dokumentami, jak i oglądanie multimediów to czysta przyjemność. Zintegrowana grafika Intel Iris Xe zapewnia dobrą wydajność w codziennych zastosowaniach i pozwala na odtwarzanie filmów w wysokiej rozdzielczości. Laptop pracuje pod kontrolą najnowszego systemu Windows 11 Home, co gwarantuje dostęp do wszystkich funkcji i aktualizacji bezpieczeństwa. Długa żywotność baterii, wynosząca do 10 godzin, pozwala na swobodną pracę przez cały dzień bez konieczności szukania gniazdka.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 WIKSAS. Wszelkie prawa zastrzeżone.
+    </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mainImage = document.getElementById('mainProductImage');
+
+    if (mainImage) {
+        const thumbnails = document.querySelectorAll('.thumbnail-gallery img');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                mainImage.src = this.dataset.fullImage;
+
+                thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        if (thumbnails.length > 0) {
+            thumbnails[0].classList.add('active');
+        }
+    }
+});
+    </script>
+
+    </body>
+</html>
