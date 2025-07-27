@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Słuchawki JBL - WIKSAS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../../glowna/style.css">
+    <script src="../../glowna/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="../../glowna/logo.png">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="../../glowna/index.html"> <img src="../../glowna/logo.png" alt="WIKSAS Logo"> </a>
+                <span class="logo-text">Wiksas <br> twój sklep</span>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-input-group">
+                <input type="text" placeholder="Czego szukasz?">
+            </div>
+            <button class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="header-right">
+            <div class="user-info">
+                Cześć, <br> zaloguj się
+            </div>
+            <div class="icons-group">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-detail-page">
+        <div class="product-detail-container">
+            <div class="product-image-gallery">
+                <img src="https://picsum.photos/600/400?random=11" alt="Słuchawki JBL Main Image" id="mainProductImage">
+                <div class="thumbnail-gallery">
+                    <img src="https://picsum.photos/100/70?random=11" alt="Słuchawki JBL Main Image" data-full-image="https://picsum.photos/600/400?random=11">
+
+                    <img src="https://picsum.photos/100/70?random=12" alt="Słuchawki JBL 1" data-full-image="https://picsum.photos/600/400?random=12">
+                    <img src="https://picsum.photos/100/70?random=13" alt="Słuchawki JBL 2" data-full-image="https://picsum.photos/600/400?random=13">
+                    <img src="https://picsum.photos/100/70?random=14" alt="Słuchawki JBL 3" data-full-image="https://picsum.photos/600/400?random=14">
+                    <img src="https://picsum.photos/100/70?random=15" alt="Słuchawki JBL 4" data-full-image="https://picsum.photos/600/400?random=15">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Słuchawki JBL</h1>
+                <p class="product-price">399 zł</p>
+
+                <div class="product-short-description">
+                    <p>
+                        Wysokiej jakości słuchawki JBL z głębokim basem i aktywną redukcją szumów. Idealne do słuchania muzyki w podróży i relaksu.
+                    </p>
+                </div>
+
+                <div class="product-actions">
+                    <button class="add-to-cart-lg">Dodaj do koszyka <i class="fas fa-shopping-cart"></i></button>
+                </div>
+
+                <div class="product-specs">
+                    <h2>Specyfikacja:</h2>
+                    <ul>
+                        <li><b>Typ:</b> Nauszne, bezprzewodowe</li>
+                        <li><b>Łączność:</b> Bluetooth 5.2</li>
+                        <li><b>Redukcja szumów:</b> Aktywna (ANC)</li>
+                        <li><b>Pasmo przenoszenia:</b> 20 Hz - 20 kHz</li>
+                        <li><b>Czułość:</b> 102 dB SPL@1kHz</li>
+                        <li><b>Impedancja:</b> 32 Ohm</li>
+                        <li><b>Czas pracy na baterii:</b> Do 40 godzin (z ANC), do 50 godzin (bez ANC)</li>
+                        <li><b>Czas ładowania:</b> Około 2 godziny</li>
+                        <li><b>Waga:</b> 250 g</li>
+                        <li><b>Funkcje:</b> Multipoint, szybkie parowanie, wbudowany mikrofon</li>
+                    </ul>
+                </div>
+                <div class="product-description-full">
+                    <h2>Szczegółowy opis:</h2>
+                    <p>
+                        Słuchawki JBL to kwintesencja doskonałego brzmienia i komfortu użytkowania. Zanurz się w świecie muzyki z głębokim, mocnym basem i krystalicznie czystymi wysokimi tonami, charakterystycznymi dla legendarnego brzmienia JBL Pure Bass. Dzięki zaawansowanej technologii aktywnej redukcji szumów (ANC), możesz odciąć się od rozpraszających dźwięków otoczenia i skupić się wyłącznie na swojej ulubionej playliście, co czyni je idealnymi towarzyszami podróży samolotem, pociągiem czy pracy w biurze.
+                    </p>
+                    <p>
+                        Bezprzewodowa łączność Bluetooth 5.2 zapewnia stabilne i szybkie połączenie z Twoimi urządzeniami, a funkcja multipoint pozwala na jednoczesne połączenie z dwoma urządzeniami i płynne przełączanie się między nimi. Bateria o imponującej żywotności do 40 godzin z włączonym ANC (do 50 godzin bez ANC) gwarantuje, że muzyka będzie Ci towarzyszyć przez cały dzień i dłużej. Słuchawki są lekkie i posiadają wygodne, miękkie nauszniki, zapewniające komfort nawet podczas długich sesji słuchania. Wbudowany mikrofon umożliwia prowadzenie krystalicznie czystych rozmów telefonicznych.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 WIKSAS. Wszelkie prawa zastrzeżone.
+    </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mainImage = document.getElementById('mainProductImage');
+
+    if (mainImage) {
+        const thumbnails = document.querySelectorAll('.thumbnail-gallery img');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                mainImage.src = this.dataset.fullImage;
+
+                thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        if (thumbnails.length > 0) {
+            thumbnails[0].classList.add('active');
+        }
+    }
+});
+    </script>
+</body>
+</html>
