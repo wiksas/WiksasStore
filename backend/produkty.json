@@ -13,5 +13,66 @@
       "54"
     ],
     "slug": "iuh"
+  },
+  {
+    "id": 1753792115406,
+    "name": "888",
+    "price": 876,
+    "mainImage": "/uploads/888/photomode_02082023_170724.png",
+    "additionalImages": [
+      "/uploads/888/photomode_10122023_204336.png",
+      "/uploads/888/photomode_10122023_204300.png"
+    ],
+    "shortDescription": "uyguyg",
+    "fullDescription": "uyguyg",
+    "specs": [
+      "uyg"
+    ],
+    "slug": "888"
+  },
+  {
+    "id": 1753792235967,
+    "name": "867",
+    "price": 87,
+    "mainImage": "/uploads/867/photomode_03082023_022338.png",
+    "additionalImages": [
+      "/uploads/867/photomode_03082023_021945.png"
+    ],
+    "shortDescription": "879",
+    "fullDescription": "987987",
+    "specs": [
+      "897987"
+    ],
+    "slug": "867"
+  },
+  {
+    "id": 1753792247914,
+    "name": "9898",
+    "price": 8677,
+    "mainImage": "/uploads/9898/photomode_30092023_014427.png",
+    "additionalImages": [
+      "/uploads/9898/photomode_10122023_204300.png"
+    ],
+    "shortDescription": "967",
+    "fullDescription": "767",
+    "specs": [
+      "76767"
+    ],
+    "slug": "9898"
+  },
+  {
+    "id": 1753792258779,
+    "name": "giyug",
+    "price": 878,
+    "mainImage": "/uploads/giyug/photomode_23102022_141909.png",
+    "additionalImages": [
+      "/uploads/giyug/photomode_30102022_211142.png"
+    ],
+    "shortDescription": "876",
+    "fullDescription": "87y",
+    "specs": [
+      "hy87"
+    ],
+    "slug": "giyug"
   }
 ]

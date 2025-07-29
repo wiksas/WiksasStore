@@ -29,15 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const productCard = document.createElement('div');
                 productCard.classList.add('product-card');
 
-                // Użyj product.mainImage, które teraz powinno wskazywać na /uploads/
-                // Upewnij się, że ten URL jest pełny i odwołuje się do serwera backendu
+
                 const imageUrl = `http://localhost:3000${product.mainImage}`;
-                
-                // Link do strony detali produktu.
-                // Używamy sluga, aby przekazać informację o tym, jaki produkt wyświetlić.
-                // WAŻNE: W twojej strukturze każdy produkt ma swój index.html w podfolderze.
-                // Dlatego link musi prowadzić do konkretnego folderu produktu.
-                // np. produkt/laptop-acer/index.html
+
                 const productDetailPageUrl = `../produkt/${product.slug}/index.html`;
 
                 productCard.innerHTML = `
