@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj Produkt - WIKSAS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../glowna/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="../glowna/index.html"> <img src="../glowna/logo.png" alt="WIKSAS Logo"> </a>
+                <span class="logo-text">Wiksas <br> twój sklep</span>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-input-group">
+                <input type="text" placeholder="Czego szukasz?">
+            </div>
+            <button class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="header-right">
+            <div class="user-info">
+                Cześć, <br> zaloguj się
+            </div>
+            <div class="icons-group">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="add-product-page">
+        <div class="add-product-container">
+            <h1>Dodaj Nowy Produkt</h1>
+            <form id="addProductForm">
+                <div class="form-group">
+                    <label for="productName">Nazwa Produktu:</label>
+                    <input type="text" id="productName" name="productName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productPrice">Cena (zł):</label>
+                    <input type="number" id="productPrice" name="productPrice" step="0.01" required>
+                </div>
+
+                <h2>Główne zdjęcie produktu</h2>
+                <div class="form-group">
+                    <label for="mainImageFile">Wybierz Główne Zdjęcie (plik):</label>
+                    <input type="file" id="mainImageFile" name="mainImageFile" accept="image/*" required>
+                    <small style="color: #888; display: block; margin-top: 5px;">(To zdjęcie pojawi się na liście produktów i jako główne na stronie detali)</small>
+                </div>
+                
+                <h2>Dodatkowe zdjęcia produktu (galeria)</h2>
+                <div id="additionalImagesContainer">
+                    <div class="form-group additional-image-group">
+                        <label for="additionalImageFile_0">Dodatkowe Zdjęcie 1 (plik):</label>
+                        <input type="file" id="additionalImageFile_0" name="additionalImageFile[]" accept="image/*">
+                        <small style="color: #888; display: block; margin-top: 5px;">(Zdjęcie do galerii produktu)</small>
+                    </div>
+                </div>
+                <button type="button" id="addMoreImages" class="add-more-button">Dodaj kolejne zdjęcie</button>
+
+
+                <div class="form-group">
+                    <label for="productShortDesc">Krótki Opis:</label>
+                    <textarea id="productShortDesc" name="productShortDesc" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="productFullDesc">Pełny Opis:</label>
+                    <textarea id="productFullDesc" name="productFullDesc" rows="6"></textarea>
+                </div>
+
+                <h2>Specyfikacja Produktu (opcjonalnie, każda linia to osobny punkt)</h2>
+                <div class="form-group">
+                    <label for="productSpecs">Wpisz specyfikację:</label>
+                    <textarea id="productSpecs" name="productSpecs" rows="5" placeholder="np.&#10;Procesor: Intel Core i5&#10;Pamięć RAM: 8 GB DDR4&#10;Dysk: 512 GB SSD"></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Dodaj Produkt</button>
+            </form>
+            <p id="message" class="message"></p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 WIKSAS. Wszelkie prawa zastrzeżone.
+    </footer>
+
+    <script src="script.js"></script> </body>
+</html>

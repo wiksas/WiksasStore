@@ -1,0 +1,156 @@
+
+
+main.add-product-page {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-product-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.add-product-container h1 {
+    text-align: center;
+    color: #00bfff;
+    margin-bottom: 30px;
+}
+
+.add-product-container h2 {
+    color: #00bfff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+    font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="url"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0088cc;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #0066aa;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #00bfff;
+}
+
+.message.error {
+    color: #d20000;
+}
+
+
+.add-more-button,
+.remove-image-button {
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.add-more-button {
+    background-color: #28a745;
+    margin-top: 15px;
+    width: auto;
+    padding: 10px 20px;
+}
+
+.add-more-button:hover {
+    background-color: #218838;
+}
+
+.remove-image-button {
+    background-color: #dc3545;
+    margin-left: 10px;
+    padding: 6px 12px;
+}
+
+.remove-image-button:hover {
+    background-color: #c82333;
+}
+
+.additional-image-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px; 
+}
+
+.additional-image-group label {
+    flex-basis: 150px;
+    flex-shrink: 0;
+}
+
+.additional-image-group input[type="file"] {
+    flex-grow: 1;
+    margin-top: 0;
+}
+
+
+.form-group input,
+.form-group textarea {
+    margin-top: 0;
+}

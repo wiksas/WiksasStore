@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1753790822416,
+    "name": "iuh",
+    "price": 4,
+    "mainImage": "/uploads/iuh/photomode_10122023_204300.png",
+    "additionalImages": [
+      "/uploads/iuh/photomode_02082023_232142.png"
+    ],
+    "shortDescription": "54",
+    "fullDescription": "545",
+    "specs": [
+      "54"
+    ],
+    "slug": "iuh"
+  }
+]
