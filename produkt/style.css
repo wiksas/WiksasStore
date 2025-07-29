@@ -1,0 +1,165 @@
+/* ... (pozostałe style) ... */
+
+/* Style dla strony dodawania produktów (dodaj-produkt/index.html) */
+.add-product-page {
+    padding: 20px;
+    background-color: #222; /* Ciemne tło dla spójności */
+    min-height: calc(100vh - 120px); /* Minimalna wysokość, by footer był na dole */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Dopasuj do góry */
+}
+
+.add-product-container {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px; /* Ogranicz szerokość formularza */
+    color: #eee;
+}
+
+.add-product-container h1,
+.add-product-container h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="url"],
+.form-group textarea {
+    width: calc(100% - 20px); /* Szerokość minus padding */
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #eee;
+    font-size: 1em;
+    box-sizing: border-box; /* Ważne dla paddingu i szerokości */
+}
+
+.form-group textarea {
+    resize: vertical; /* Pozwól na zmianę rozmiaru w pionie */
+    min-height: 80px;
+}
+
+/* Styl dla input type="file" (może się różnić w zależności od przeglądarki) */
+.form-group input[type="file"] {
+    background-color: #444;
+    border: 1px solid #555;
+    color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.2s ease;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Domyślnie ukryta */
+}
+
+.message.error {
+    background-color: #ffcccc;
+    color: #d20000;
+}
+
+.message:not(.error) {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Nowe style dla strony dodawania produktów - przyciski dodawania/usuwania zdjęć */
+
+.add-more-button,
+.remove-image-button {
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+    margin-top: 5px;
+    display: inline-block; /* Aby przycisk Usuń był obok inputa */
+}
+
+.add-more-button {
+    background-color: #28a745; /* Zielony kolor dla dodawania */
+    margin-top: 15px;
+    width: auto;
+    padding: 10px 20px;
+}
+
+.add-more-button:hover {
+    background-color: #218838;
+}
+
+.remove-image-button {
+    background-color: #dc3545; /* Czerwony kolor dla usuwania */
+    margin-left: 10px; /* Odstęp od inputa */
+    padding: 6px 12px;
+}
+
+.remove-image-button:hover {
+    background-color: #c82333;
+}
+
+.additional-image-group {
+    display: flex;
+    align-items: center; /* Wyśrodkowanie w pionie inputa i przycisku */
+    gap: 10px; /* Odstęp między inputem a przyciskiem */
+    margin-bottom: 10px; /* Mniejszy odstęp między grupami dodatkowych zdjęć */
+}
+
+.additional-image-group label {
+    flex-basis: 150px; /* Stała szerokość dla labela, jeśli potrzebujesz */
+    flex-shrink: 0;
+}
+
+.additional-image-group input[type="file"] {
+    flex-grow: 1; /* Pozwala inputowi zająć dostępną przestrzeń */
+    margin-top: 0; /* Usuń margines, bo flex już zarządza odstępem */
+}
+
+/* Dostosowanie ogólnego stylu inputów, aby nie kolidowały z input type="file" */
+.form-group input,
+.form-group textarea {
+    margin-top: 0; /* Resetuj ewentualne marginesy z poprzednich reguł */
+}

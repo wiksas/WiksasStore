@@ -299,7 +299,6 @@ main.product-detail-page {
 
 
 .product-info {
-    
     color: white;
     display: flex;
     flex-direction: column;
@@ -308,7 +307,6 @@ main.product-detail-page {
 .product-info h1 {
     font-size: 2.5em;
     margin: 0 ;
-
     color: #E5E5E5;
 }
 
