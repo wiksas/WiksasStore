@@ -1,4 +1,3 @@
-// sklep/glowna/script.js
 document.addEventListener('DOMContentLoaded', () => {
     const productListings = document.getElementById('product-listings');
 
@@ -7,18 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // Funkcja do pobierania i wyświetlania produktów
     async function fetchProducts() {
-        productListings.innerHTML = '<p class="loading-message">Ładowanie produktów...</p>'; // Komunikat ładowania
+        productListings.innerHTML = '<p class="loading-message">Ładowanie produktów...</p>';
         try {
-            const response = await fetch('http://localhost:3000/api/products'); // Adres API backendu
+            const response = await fetch('http://localhost:3000/api/products');
             if (!response.ok) {
-                // Jeśli odpowiedź nie jest OK (np. 404, 500), rzuć błąd
                 throw new Error(`Błąd HTTP: ${response.status} ${response.statusText}`);
             }
-            const products = await response.json(); // Parsuj odpowiedź jako JSON
+            const products = await response.json();
 
-            productListings.innerHTML = ''; // Wyczyść komunikat ładowania
+            productListings.innerHTML = '';
 
             if (products.length === 0) {
                 productListings.innerHTML = '<p class="no-products-message">Brak dostępnych produktów.</p>';

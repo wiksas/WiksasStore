@@ -1,11 +1,11 @@
-
+/* Generalne style dla całego body */
 html, body {
     height: 100%;
-    margin: 0; 
+    margin: 0;
     font-family: "Instrument Sans", sans-serif;
-    background-color: #111;
-    color: white;
-    display: flex; 
+    background-color: #2e3b2e; /* Zmieniony: Ciemnozielone tło, jak las */
+    color: #e0e0d8; /* Zmieniony: Jasny, kremowy kolor tekstu dla kontrastu */
+    display: flex;
     flex-direction: column; /* Aby stopka była zawsze na dole */
 }
 
@@ -15,7 +15,7 @@ a {
 }
 
 header {
-    background-color: #1a1a1a;
+    background-color: #3b4d3b; /* Zmieniony: Nieco jaśniejszy odcień zieleni dla nagłówka */
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -46,12 +46,12 @@ header {
 .logo-text {
     font-size: 14px;
     line-height: 1.2;
-    color: #bbb; 
+    color: #a8c6aa; /* Zmieniony: Zielono-kremowy kolor tekstu */
 }
 
 .search-container {
     display: flex;
-    max-width: 600px; 
+    max-width: 600px;
     flex-grow: 1;
     border-radius: 8px;
     overflow: hidden;
@@ -60,29 +60,29 @@ header {
 .search-input-group {
     flex-grow: 1;
     display: flex;
-    background-color: #2c2c2c; 
+    background-color: #4a5d4a; /* Zmieniony: Ciemniejsza zieleń dla pola wyszukiwania */
 }
 
 .search-input-group input {
     width: 100%;
     padding: 10px 15px;
     border: none;
-    background-color: #2a2a2a;
-    color: white;
+    background-color: #4a5d4a; /* Zmieniony: Ciemniejsza zieleń dla inputa */
+    color: #e0e0d8; /* Zmieniony: Jasny kolor tekstu w input */
     outline: none;
 }
 
 .search-input-group input::placeholder {
-    color: #888;
+    color: #b0b0a8; /* Zmieniony: Subtelny kolor placeholder'a */
 }
 
 .search-button {
-    background-color: #e0e0e0; 
-    color: #1a1a1a; 
+    background-color: #8cbf8c; /* Zmieniony: Jasnozielony kolor przycisku wyszukiwania */
+    color: #3b4d3b; /* Zmieniony: Ciemnozielony tekst na przycisku */
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 18px; 
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,7 +90,7 @@ header {
 }
 
 .search-button:hover {
-    background-color: #d0d0d0;
+    background-color: #7ab37a; /* Zmieniony: Ciemniejsza zieleń na hover */
 }
 
 .header-right {
@@ -104,8 +104,8 @@ header {
     font-size: 14px;
     line-height: 1.3;
     text-align: right;
-    color: #bbb;
-    white-space: nowrap; 
+    color: #a8c6aa; /* Zmieniony: Zielono-kremowy kolor */
+    white-space: nowrap;
 }
 
 .icons-group {
@@ -114,36 +114,38 @@ header {
 }
 
 .icons-group i {
-    color: white;
+    color: #e0e0d8; /* Zmieniony: Kolor ikon */
     font-size: 22px;
     cursor: pointer;
     transition: color 0.2s;
 }
 
 .icons-group i:hover {
-    color: #0088cc;
+    color: #8cbf8c; /* Zmieniony: Kolor ikon po najechaniu */
 }
-
-
 
 main {
     padding: 20px;
     gap: 25px;
     margin: 0px auto;
 }
-#product-listings {
-    display: flex;
+
+#product-listings { /* Jeśli używasz tego ID dla main, wklej tu poprzednie style grid */
+    display: flex; /* Pamiętaj, że dla siatki powinno być 'grid' nie 'flex' */
     padding: 20px;
     gap: 25px;
     flex-wrap: wrap;
+    /* Poniższe style byłyby dla main#product-list-container, jeśli zmienisz ID */
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); */
+    /* max-width: 1200px; */
+    /* margin: 20px auto; */
+    /* box-sizing: border-box; */
 }
 
-
-
-/* --- KARTA PRODUKTU (.product-card) --- */
 .product-card {
-    background-color: #222;
-    border: 1px solid #333;
+    background-color: #3b4d3b; /* Zmieniony: Tło karty w odcieniach zieleni */
+    border: 1px solid #5a6b5a; /* Zmieniony: Subtelna ramka */
     border-radius: 10px;
     text-align: center;
     padding: 20px;
@@ -159,31 +161,28 @@ main {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
-/* Styl dla linku obejmującego większość karty */
 .product-link {
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Pozwala linkowi zająć dostępną przestrzeń w kolumnie */
-    justify-content: flex-start; /* Dopasowuje zawartość do góry */
+    flex-grow: 1;
+    justify-content: flex-start;
 }
 
-/* Styl dla obrazka produktu */
 .product-image {
     max-width: 100%;
-    height: 180px; /* Stała wysokość dla obrazków */
-    object-fit: contain; /* Obrazek będzie mieścił się w ramce bez przycinania */
+    height: 180px;
+    object-fit: contain;
     margin-bottom: 15px;
     border-radius: 5px;
 }
 
-/* Styl dla nazwy produktu */
 .product-name {
     margin: 10px 0 8px;
-    color: #e0e0e0;
+    color: #e0e0d8; /* Zmieniony: Kolor nazwy */
     font-size: 1.4em;
-    min-height: 2.8em; /* Około 2 linii tekstu dla nazwy */
+    min-height: 2.8em;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -191,31 +190,28 @@ main {
     -webkit-box-orient: vertical;
 }
 
-/* Styl dla ceny produktu */
 .product-price {
-    color: #ff4d4d;
+    color: #ff7f50; /* Zmieniony: Ciepły, pomarańczowy kolor - jak kwiaty na bonsai */
     font-weight: bold;
     font-size: 1.8em;
-    margin: 15px 0 10px; /* Zmniejszony dolny margines, żeby opis był bliżej */
+    margin: 15px 0 10px;
 }
 
-/* Styl dla krótkiego opisu produktu */
 .product-description {
-    color: #ccc; 
+    color: #c0c0b8; /* Zmieniony: Jaśniejszy kolor dla opisu */
     font-size: 0.95em;
-    margin-bottom: 15px; /* Odstęp od przycisku */
-    flex-grow: 1; /* Pozwala opisowi zająć dostępną przestrzeń, rozpychając się */
+    margin-bottom: 15px;
+    flex-grow: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Ogranicz opis do 3 linii */
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
-/* Styl dla przycisku "Dodaj do koszyka" */
 .add-to-cart-button {
-    background-color: #0088cc;
-    color: white;
+    background-color: #8cbf8c; /* Zmieniony: Jasnozielony kolor */
+    color: #3b4d3b; /* Zmieniony: Ciemnozielony tekst */
     border: none;
     padding: 12px 20px;
     cursor: pointer;
@@ -223,34 +219,32 @@ main {
     transition: background-color 0.2s, transform 0.1s;
     font-size: 1.1em;
     width: 100%;
-    margin-top: auto; /* Pcha przycisk na sam dół karty */
+    margin-top: auto;
 }
 
 .add-to-cart-button:hover {
-    background-color: #0066aa;
+    background-color: #7ab37a; /* Zmieniony: Ciemniejsza zieleń na hover */
     transform: translateY(-2px);
 }
 
-/* --- STOPKA (FOOTER) --- */
 footer {
-    background-color: #1a1a1a;
+    background-color: #3b4d3b; /* Zmieniony: To samo tło co nagłówek dla spójności */
     text-align: center;
     padding: 15px;
-    color: #bbb; 
+    color: #a8c6aa; /* Zmieniony: Kolor tekstu w stopce */
     font-size: 14px;
     flex-shrink: 0;
     margin-top: auto;
 }
 
-/* --- STYLE DLA STRONY DETALI PRODUKTU (main.product-detail-page) --- */
-/* Te style pozostają bez zmian w klasach, ponieważ pochodzą z innego kontekstu HTML */
-main.product-detail-page { 
+/* Strona detali produktu */
+main.product-detail-page {
     padding: 40px;
     margin: 20px auto;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     gap: 40px;
-    background-color: #222;
+    background-color: #3b4d3b; /* Zmieniony: To samo tło co nagłówek dla spójności */
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
     max-width: 1000px;
@@ -259,7 +253,7 @@ main.product-detail-page {
 
 .product-detail-container {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 50px;
     align-items: flex-start;
     justify-content: center;
@@ -269,11 +263,11 @@ main.product-detail-page {
     flex: 1;
     min-width: 300px;
     max-width: 45%;
-    background-color: #333;
+    background-color: #4a5d4a; /* Zmieniony: Ciemniejsza zieleń tła galerii */
     padding: 25px;
     border-radius: 10px;
     box-shadow: inset 0 0 60px rgba(0,0,0,0.5);
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
@@ -297,7 +291,7 @@ main.product-detail-page {
 .thumbnail-gallery img {
     width: 90px;
     height: 70px;
-    object-fit: cover; 
+    object-fit: cover;
     border: 3px solid transparent;
     border-radius: 8px;
     cursor: pointer;
@@ -307,7 +301,7 @@ main.product-detail-page {
 
 .thumbnail-gallery img:hover,
 .thumbnail-gallery img.active {
-    border-color: #0088cc;
+    border-color: #ff7f50; /* Zmieniony: Kolor ramki aktywny/hover - pomarańczowy */
     transform: translateY(-4px);
     opacity: 1;
 }
@@ -315,7 +309,7 @@ main.product-detail-page {
 .product-info {
     flex: 2;
     min-width: 350px;
-    color: white;
+    color: #e0e0d8; /* Zmieniony: Kolor tekstu informacji o produkcie */
     display: flex;
     flex-direction: column;
 }
@@ -323,36 +317,36 @@ main.product-detail-page {
 .product-info h1 {
     font-size: 2.8em;
     margin: 0 0 10px;
-    color: #f0f0f0;
+    color: #f0f0d8; /* Zmieniony: Jaśniejszy kolor nagłówka */
     line-height: 1.2;
 }
 
 .product-info .product-price {
     font-size: 2.5em;
     font-weight: bold;
-    color: #ff4d4d;
+    color: #ff7f50; /* Zmieniony: Pomarańczowy kolor ceny */
     margin-bottom: 30px;
 }
 
 .product-short-description p {
     font-size: 1.15em;
     line-height: 1.6;
-    color: #d0d0d0;
+    color: #d0d0c8; /* Zmieniony: Jaśniejszy kolor opisu */
     margin-bottom: 30px;
 }
 
 .product-actions {
-    margin-top: 25px; 
+    margin-top: 25px;
     margin-bottom: 35px;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .add-to-cart-lg {
-    background-color: #0088cc; 
-    color: white;
+    background-color: #8cbf8c; /* Zmieniony: Jasnozielony przycisk */
+    color: #3b4d3b; /* Zmieniony: Ciemnozielony tekst */
     border: none;
     padding: 18px 35px;
     font-size: 1.3em;
@@ -360,11 +354,11 @@ main.product-detail-page {
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.1s;
     flex-grow: 1;
-    min-width: 200px; 
+    min-width: 200px;
 }
 
 .add-to-cart-lg:hover {
-    background-color: #0066aa;
+    background-color: #7ab37a; /* Zmieniony: Ciemniejsza zieleń na hover */
     transform: translateY(-3px);
 }
 
@@ -372,8 +366,8 @@ main.product-detail-page {
     font-size: 1.8em;
     margin-top: 40px;
     margin-bottom: 15px;
-    color: #e0e0e0;
-    border-bottom: 2px solid #555;
+    color: #e0e0d8; /* Zmieniony: Kolor nagłówków sekcji */
+    border-bottom: 2px solid #a8c6aa; /* Zmieniony: Subtelna ramka na dole */
     padding-bottom: 8px;
 }
 
@@ -386,32 +380,51 @@ main.product-detail-page {
 .product-info ul li {
     margin-bottom: 10px;
     font-size: 1.15em;
-    color: #d0d0d0;
+    color: #d0d0c8; /* Zmieniony: Kolor tekstu listy */
 }
 
 .product-info ul li strong {
-    color: #f0f0f0;
+    color: #f0f0d8; /* Zmieniony: Kolor pogrubionego tekstu */
 }
 
 .product-description-full p {
     font-size: 1.15em;
     line-height: 1.7;
-    color: #d0d0d0;
+    color: #d0d0c8; /* Zmieniony: Kolor pełnego opisu */
     margin-top: 15px;
 }
 
-/* --- Media Queries dla Responsywności --- */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* ZMIANA: Wyśrodkowuje elementy w kolumnie */
         gap: 15px;
         padding: 10px 15px;
+    }
+
+    .header-left {
+        width: 100%; /* Upewnij się, że .header-left zajmuje pełną szerokość */
+        justify-content: center; /* ZMIANA: Wyśrodkowuje logo w .header-left */
+    }
+
+    .logo-text {
+        font-size: 1.4em;
     }
 
     .search-container {
         width: 100%;
         max-width: none;
+        border-radius: 15px;
+    }
+
+    .search-input-group input {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    .search-button {
+        font-size: 16px;
+        padding: 8px 15px;
     }
 
     .header-right {
@@ -420,91 +433,11 @@ main.product-detail-page {
         gap: 0;
     }
 
-    main {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 15px;
-        padding: 15px;
+    .user-info {
+        font-size: 0.95em;
     }
 
-.product-listings{
-    display: flex;
-    flex-direction: row;
-}
-
- .product-card {
-    background-color: #222;
-    border: 1px solid #333;
-    border-radius: 10px;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-}
-
-
-    
-.product-description {
-    color: #ccc; 
-    font-size: 0.95em;
-    margin-bottom: 15px;
-    flex-grow: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-}
-
-
-
-
-    /* Strona detali produktu */
-    main.product-detail-page {
-        padding: 20px;
-        margin: 10px auto;
-    }
-
-    .product-detail-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .product-image-gallery, .product-info {
-        max-width: 100%;
-        min-width: unset;
-    }
-
-    .product-image-gallery img#mainProductImage {
-        margin-bottom: 10px;
-    }
-
-    .thumbnail-gallery {
-        gap: 8px;
-    }
-
-    .thumbnail-gallery img {
-        width: 70px;
-        height: 50px;
-    }
-
-    .product-info h1 {
-        font-size: 2em;
-    }
-
-    .product-info .product-price {
-        font-size: 2em;
-    }
-
-    .add-to-cart-lg {
-        font-size: 1.1em;
-        padding: 12px 20px;
-    }
-
-    .product-info h2 {
-        font-size: 1.4em;
-        margin-top: 25px;
-    }
-
-    .product-info ul li, .product-description-full p {
-        font-size: 1em;
+    .icons-group i {
+        font-size: 20px;
     }
 }
