@@ -1,52 +1,56 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const productListings = document.getElementById('product-listings');
 
+async function fetchProducts() {
+    try {
+        const response = await fetch('http://localhost:3000/api/products');
+        if (!response.ok) {
+            throw new Error(`Błąd HTTP: ${response.status} ${response.statusText}`);
+        }
+        const products = await response.json();
+        displayProducts(products);
+    } catch (error) {
+        console.error('Błąd ładowania produktów:', error);
+        const productListings = document.getElementById('product-listings');
+        if (productListings) {
+            productListings.innerHTML = '<p>Błąd ładowania produktów. Spróbuj odświeżyć stronę lub skontaktuj się z administratorem.</p>';
+        }
+    }
+}
+
+function displayProducts(products) {
+    const productListings = document.getElementById('product-listings');
     if (!productListings) {
-        console.error('Błąd: Element #product-listings nie znaleziony.');
+        console.error("Element #product-listings nie został znaleziony w DOM.");
+        return;
+    }
+    productListings.innerHTML = '';
+
+    if (products.length === 0) {
+        productListings.innerHTML = '<p>Brak dostępnych produktów.</p>';
         return;
     }
 
-    async function fetchProducts() {
-        productListings.innerHTML = '<p class="loading-message">Ładowanie produktów...</p>';
-        try {
-            const response = await fetch('http://localhost:3000/api/products');
-            if (!response.ok) {
-                throw new Error(`Błąd HTTP: ${response.status} ${response.statusText}`);
-            }
-            const products = await response.json();
+    products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card');
 
-            productListings.innerHTML = '';
+        const productSlug = product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
-            if (products.length === 0) {
-                productListings.innerHTML = '<p class="no-products-message">Brak dostępnych produktów.</p>';
-                return;
-            }
+        const imageUrl = `http://localhost:3000/backend/${product.mainImage}`;
+        const productPageUrl = `./produkt/${productSlug}/index.html`;
 
-            products.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.classList.add('product-card');
+        productCard.innerHTML = `
+            <a href="${productPageUrl}" class="product-link">
+                <img src="${imageUrl}" alt="${product.name}" class="product-image">
+                <h3 class="product-name">${product.name}</h3>
+                <p class="product-price">${product.price.toFixed(2)} zł</p>
+                <p class="product-description">${product.shortDescription}</p>
+            </a>
+            <button class="add-to-cart-button" data-product-id="${product.id}">Dodaj do koszyka</button>
+        `;
+        productListings.appendChild(productCard);
+    });
+}
 
 
-                const imageUrl = `http://localhost:3000${product.mainImage}`;
 
-                const productDetailPageUrl = `../produkt/${product.slug}/index.html`;
-
-                productCard.innerHTML = `
-                    <a href="${productDetailPageUrl}" class="product-link">
-                        <img src="${imageUrl}" alt="${product.name}" class="product-image">
-                        <h3 class="product-name">${product.name}</h3>
-                        <p class="product-price">${product.price.toFixed(2)} zł</p>
-                        <p class="product-description">${product.shortDescription}</p>
-                    </a>
-                    <button class="add-to-cart-button">Dodaj do koszyka</button>
-                `;
-                productListings.appendChild(productCard);
-            });
-        } catch (error) {
-            console.error('Błąd ładowania produktów:', error);
-            productListings.innerHTML = `<p class="error-message">Błąd: ${error.message}. Spróbuj odświeżyć stronę lub skontaktuj się z administratorem.</p>`;
-        }
-    }
-
-    fetchProducts();
-});
+document.addEventListener('DOMContentLoaded', fetchProducts);

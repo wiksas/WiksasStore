@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('price', addProductForm.productPrice.value);
             formData.append('shortDescription', addProductForm.productShortDesc.value);
             formData.append('fullDescription', addProductForm.productFullDesc.value);
-            formData.append('specs', addProductForm.productSpecs.value);
+            formData.append('specifications', addProductForm.productSpecs.value);
             formData.append('slug', generateSlug(addProductForm.productName.value));
 
 
