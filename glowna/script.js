@@ -51,5 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    fetchProducts(); // Wywołaj funkcję po załadowaniu DOM
+    fetchProducts();
 });

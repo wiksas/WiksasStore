@@ -1,13 +1,11 @@
-/* ... (pozostałe style) ... */
 
-/* Style dla strony dodawania produktów (dodaj-produkt/index.html) */
 .add-product-page {
     padding: 20px;
-    background-color: #222; /* Ciemne tło dla spójności */
-    min-height: calc(100vh - 120px); /* Minimalna wysokość, by footer był na dole */
+    background-color: #222;
+    min-height: calc(100vh - 120px);
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Dopasuj do góry */
+    align-items: flex-start;
 }
 
 .add-product-container {
@@ -16,7 +14,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 600px; /* Ogranicz szerokość formularza */
+    max-width: 600px;
     color: #eee;
 }
 
@@ -42,22 +40,22 @@
 .form-group input[type="number"],
 .form-group input[type="url"],
 .form-group textarea {
-    width: calc(100% - 20px); /* Szerokość minus padding */
+    width: calc(100% - 20px);
     padding: 10px;
     border: 1px solid #555;
     border-radius: 5px;
     background-color: #444;
     color: #eee;
     font-size: 1em;
-    box-sizing: border-box; /* Ważne dla paddingu i szerokości */
+    box-sizing: border-box;
 }
 
 .form-group textarea {
-    resize: vertical; /* Pozwól na zmianę rozmiaru w pionie */
+    resize: vertical;
     min-height: 80px;
 }
 
-/* Styl dla input type="file" (może się różnić w zależności od przeglądarki) */
+
 .form-group input[type="file"] {
     background-color: #444;
     border: 1px solid #555;
@@ -91,7 +89,7 @@
     margin-top: 20px;
     padding: 10px;
     border-radius: 5px;
-    display: none; /* Domyślnie ukryta */
+    display: none;
 }
 
 .message.error {
@@ -104,7 +102,6 @@
     color: #155724;
 }
 
-/* Nowe style dla strony dodawania produktów - przyciski dodawania/usuwania zdjęć */
 
 .add-more-button,
 .remove-image-button {
@@ -117,11 +114,11 @@
     border-radius: 3px;
     transition: background-color 0.2s ease;
     margin-top: 5px;
-    display: inline-block; /* Aby przycisk Usuń był obok inputa */
+    display: inline-block;
 }
 
 .add-more-button {
-    background-color: #28a745; /* Zielony kolor dla dodawania */
+    background-color: #28a745;
     margin-top: 15px;
     width: auto;
     padding: 10px 20px;
@@ -132,8 +129,8 @@
 }
 
 .remove-image-button {
-    background-color: #dc3545; /* Czerwony kolor dla usuwania */
-    margin-left: 10px; /* Odstęp od inputa */
+    background-color: #dc3545;
+    margin-left: 10px;
     padding: 6px 12px;
 }
 
@@ -143,23 +140,23 @@
 
 .additional-image-group {
     display: flex;
-    align-items: center; /* Wyśrodkowanie w pionie inputa i przycisku */
-    gap: 10px; /* Odstęp między inputem a przyciskiem */
-    margin-bottom: 10px; /* Mniejszy odstęp między grupami dodatkowych zdjęć */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .additional-image-group label {
-    flex-basis: 150px; /* Stała szerokość dla labela, jeśli potrzebujesz */
+    flex-basis: 150px;
     flex-shrink: 0;
 }
 
 .additional-image-group input[type="file"] {
-    flex-grow: 1; /* Pozwala inputowi zająć dostępną przestrzeń */
-    margin-top: 0; /* Usuń margines, bo flex już zarządza odstępem */
+    flex-grow: 1;
+    margin-top: 0;
 }
 
-/* Dostosowanie ogólnego stylu inputów, aby nie kolidowały z input type="file" */
+
 .form-group input,
 .form-group textarea {
-    margin-top: 0; /* Resetuj ewentualne marginesy z poprzednich reguł */
+    margin-top: 0;
 }
