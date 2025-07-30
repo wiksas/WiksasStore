@@ -19,12 +19,12 @@ main.add-product-page {
 
 .add-product-container h1 {
     text-align: center;
-    color: #00bfff;
+    color: #28a745;
     margin-bottom: 30px;
 }
 
 .add-product-container h2 {
-    color: #00bfff;
+    color: #28a745;
     margin-top: 30px;
     margin-bottom: 15px;
     border-bottom: 1px solid #444;
@@ -60,7 +60,7 @@ main.add-product-page {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #0088cc;
+    border-color: #28a745;
 }
 
 .form-group textarea {
@@ -68,7 +68,7 @@ main.add-product-page {
 }
 
 .submit-button {
-    background-color: #0088cc;
+    background-color: #28a745;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -82,7 +82,7 @@ main.add-product-page {
 }
 
 .submit-button:hover {
-    background-color: #0066aa;
+    background-color: #28a745;
 }
 
 .message {
@@ -99,7 +99,7 @@ main.add-product-page {
 
 .add-more-button,
 .remove-image-button {
-    background-color: #0088cc;
+    background-color: #c82333;
     color: white;
     border: none;
     padding: 8px 15px;

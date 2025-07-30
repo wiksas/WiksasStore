@@ -1,17 +1,47 @@
 [
   {
-    "id": 1753790822416,
-    "name": "iuh",
-    "price": 4,
-    "mainImage": "/uploads/iuh/photomode_10122023_204300.png",
+    "id": 1,
+    "name": "87",
+    "price": 87,
+    "shortDescription": "uytfuytf",
+    "fullDescription": "uytfuytf",
+    "specifications": [],
+    "mainImage": "uploads/87/1753881937496-photomode_02082023_222509.png",
     "additionalImages": [
-      "/uploads/iuh/photomode_02082023_232142.png"
+      "uploads/87/1753881937538-photomode_02082023_204423.png"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "64",
+    "price": 564,
+    "shortDescription": "rewarew",
+    "fullDescription": "arewarewa",
+    "specifications": [
+      "rewarewa"
     ],
-    "shortDescription": "54",
-    "fullDescription": "545",
-    "specs": [
-      "54"
+    "mainImage": "uploads/64/1753881966650-photomode_03082023_022159.png",
+    "additionalImages": []
+  },
+  {
+    "id": 3,
+    "name": "iyugiu",
+    "price": 87,
+    "shortDescription": "iyg",
+    "fullDescription": "iuygiuy",
+    "specifications": [
+      "uiygiuyg 45",
+      "cwiuhvw 658",
+      "31c 2487",
+      "wqcoiyug: 44"
     ],
-    "slug": "iuh"
+    "mainImage": "uploads/iyugiu/1753882045894-photomode_02082023_232059.png",
+    "additionalImages": [
+      "uploads/iyugiu/1753882045934-photomode_05122023_235432.png",
+      "uploads/iyugiu/1753882045965-photomode_02082023_175743.png",
+      "uploads/iyugiu/1753882046000-photomode_02082023_192602.png",
+      "uploads/iyugiu/1753882046032-photomode_09122023_000429.png",
+      "uploads/iyugiu/1753882046041-photomode_02082023_192958.png"
+    ]
   }
 ]
